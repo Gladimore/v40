@@ -13,6 +13,10 @@ if (bool || get == null) {
   }
 }
 
+window.addEventListener('beforeunload', (event) => {
+  event.returnValue = "Are you sure you want to leave?";
+});
+
 const setObj = function (key, obj) {
     localStorage.setItem(key, JSON.stringify(obj))
 }
